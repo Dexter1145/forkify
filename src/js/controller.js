@@ -9,14 +9,6 @@ import addRecipeView from './views/addRecipeView.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
-if (module.hot) {
-  module.hot.accept();
-}
-
-const newFeature = function () {
-  console.log('Welcome to the application');
-};
-
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -130,6 +122,5 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  newFeature();
 };
 init();
